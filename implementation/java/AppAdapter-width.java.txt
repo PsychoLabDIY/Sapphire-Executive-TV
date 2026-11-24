@@ -1,0 +1,9 @@
+    // Only the fixed six-app dock grows, keeping enough room for the 6dp focus ring on both sides.
+    static int executiveTileWidthPx(int innerWidthPx, int gridHeightPx, int columns, int rowsBelowDock,
+                                    boolean dockTitle, boolean dockRow, float density) {
+        int base = tileWidthPx(innerWidthPx, gridHeightPx, columns, rowsBelowDock, dockTitle, dockRow, density);
+        if (!dockRow || columns != 6 || rowsBelowDock != 0 || innerWidthPx <= 0) return base;
+        int cap = innerWidthPx / columns - Math.round(12 * density);
+        return Math.max(base, Math.min(cap, Math.round(base * 1.10f)));
+    }
+

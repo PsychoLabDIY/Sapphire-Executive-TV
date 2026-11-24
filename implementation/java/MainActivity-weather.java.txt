@@ -1,0 +1,20 @@
+    // Called on the main thread from the existing foreground statistics refresh.
+    private CharSequence executiveV4Stats(String line) {
+        android.widget.TextView weather = findViewById(R.id.executiveWeather);
+        String value = ExecutiveWeather.current();
+        if (weather != null) {
+            if (value == null || value.isEmpty()) {
+                weather.setVisibility(android.view.View.INVISIBLE);
+            } else {
+                android.text.SpannableString label = new android.text.SpannableString(value);
+                int i = value.lastIndexOf(' ');
+                if (i >= 0 && i + 1 < value.length()) label.setSpan(
+                    new android.text.style.ForegroundColorSpan(0xFFF0D7A3), i + 1, value.length(),
+                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                if (!android.text.TextUtils.equals(weather.getText(), label)) weather.setText(label);
+                weather.setVisibility(android.view.View.VISIBLE);
+            }
+        }
+        return ExecutiveStats.decorate(sapphireStats(line), line, "");
+    }
+
