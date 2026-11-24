@@ -3,9 +3,9 @@
 **A custom Android TV home screen for Xiaomi TV A Pro 55 (2026).**  
 CleanYourTV-based interface · graphite and champagne accents · remote-first navigation
 
-![Sapphire Executive V4 running on the physical television](docs/images/home-v4.jpg)
+![Sapphire Executive V6.2 - native Home screen](docs/images/home.png)
 
-*V4 on the actual TV, 24 November 2026. Cropped frame from the owner's phone recording, not a design mockup or direct ADB screenshot.*
+*Direct 1920 x 1080 Android screen capture from the installed V6.2 build, 24 November 2026. No camera, crop or compositing.*
 
 [Polski opis](docs/README.pl.md) · [Implementation notes](docs/implementation.md) · [MIT license](LICENSE)
 
@@ -14,7 +14,7 @@ CleanYourTV-based interface · graphite and champagne accents · remote-first na
 | Feature | Implementation |
 | --- | --- |
 | Six favorite apps | HBO Max, Netflix, Prime Video, YouTube, Google Play, Projectivy |
-| App library | Native CleanYourTV catalogue; 17 apps visible in the V4 recording |
+| App library | Native CleanYourTV catalogue; 17 apps visible in the V6.2 native capture |
 | System information | Live RAM usage, storage availability and a native RAM bar |
 | Clock and date | Dynamic Polish header and champagne accent |
 | Weather | Fixed-city Zamość forecast via Open-Meteo; foreground-triggered requests, 30-minute refresh after success |
@@ -27,10 +27,9 @@ CleanYourTV-based interface · graphite and champagne accents · remote-first na
 
 | App library | HDMI menu |
 | --- | --- |
-| ![App library photographed on the TV](docs/images/app-library-v4.jpg) | ![HDMI source picker photographed on the TV](docs/images/hdmi-v4.jpg) |
+| ![Native app library](docs/images/app-library.png) | ![Native HDMI picker](docs/images/hdmi.png) |
 
-These are cropped frames from the same real recording. Camera exposure and TV settings affect the displayed colors. No UI elements were drawn over the images.
-
+All three PNGs are byte-for-byte original captures from the same on-device ADB QA report. [QA findings and limitations](docs/qa-v62.md).
 ## Test device
 
 | Component | Configuration |
@@ -44,10 +43,7 @@ These are cropped frames from the same real recording. Camera exposure and TV se
 
 ## Project status
 
-V4 is running on the test TV. The recording demonstrates the home screen, app catalogue, HDMI picker and access to Android network settings. This is a single-device project, not a compatibility claim for other TVs. Long-run performance and reboot persistence are not certified here.
-
-Known limitations: dark wallpaper areas appear grainy in the phone footage; menu colors still appear more blue than intended. A native screen capture is needed to separate source-image issues from display processing and camera compression.
-
+V6.2 is running on the test TV. Six native dock cards have 25% transparent backgrounds, separate native rims and equal spacing. Home, clock, weather, library and HDMI were observed. The idle screen was not reached within the QA timeout; remote input also interrupted the automated focus sequence. These captures do not establish panel quality, long-run performance or reboot persistence. The source snapshot below remains partial.
 ## Source and availability
 
 The `implementation/` directory contains actual Java components, V4 resource files, helper excerpts and geometry tests used in the local project. It is **not a standalone Android build**; the full locally patched upstream tree and signing material are not distributed. See the implementation notes for the boundaries of this snapshot. Do not uninstall a working launcher to resolve a signature mismatch.

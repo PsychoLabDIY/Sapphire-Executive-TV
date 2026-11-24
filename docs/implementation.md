@@ -20,4 +20,4 @@ The local Windows installer copied a matching previously installed source tree, 
 
 ## Evidence
 
-The gallery is from the 15.47-second owner recording made on 24 November 2026. Source frames at approximately 0.5s (home), 6s (library) and 12s (HDMI) were cropped to the display region. The camera view partially clips screen edges. No color corrections, generated UI, or upscaling are applied. The raw video is not published to avoid exposing the room. Visual behavior is demonstrated on one TV; no claim is made for an unrecorded benchmark or reboot test.
+Three original 1920 x 1080 native ADB PNGs from the V6.2 QA archive. See [QA findings](qa-v62.md). Older implementation excerpts describe the earlier V4 snapshot, not a full buildable V6.2 tree.

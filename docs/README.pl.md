@@ -2,7 +2,7 @@
 
 Polski, minimalistyczny ekran główny Android TV na Xiaomi A Pro 55 (2026). Projekt rozwijany na bazie CleanYourTV, z zachowaniem obsługi pilota i funkcji systemowych.
 
-![Działający ekran V4](images/home-v4.jpg)
+![Ekran glowny V6.2](images/home.png)
 
 ## Funkcje
 
@@ -15,14 +15,9 @@ Polski, minimalistyczny ekran główny Android TV na Xiaomi A Pro 55 (2026). Pro
 
 ## Rzeczywisty wygląd
 
-![Biblioteka aplikacji](images/app-library-v4.jpg)
+![Biblioteka aplikacji](images/app-library.png)
 
-![Wybór HDMI](images/hdmi-v4.jpg)
+![Menu HDMI](images/hdmi.png)
 
-Klatki z nagrania fizycznego telewizora z 24.11.2026, wykadrowane bez zmiany kolorów. Nie są cyfrowymi zrzutami ADB. Wersja V4 działa na egzemplarzu testowym; długotrwała wydajność i zachowanie po restarcie nie zostały udokumentowane w tym nagraniu.
-
-## Dalsze poprawki
-
-Redukcja ziarnistości ciemnych obszarów tapety, sprawdzenie ustawień wyostrzania i porównanie barw menu z cyfrowym zrzutem ADB. Bez zmiany kompozycji tapety.
-
+Trzy oryginalne zrzuty PNG 1920 × 1080 wykonane przez ADB na działającej wersji V6.2. Bez zdjęć aparatem, kadrowania i retuszu. Przezroczystość tła kafelków wynosi 25%. Raport nie potwierdza wygaszacza ani długotrwałej wydajności. [Wyniki i ograniczenia QA](qa-v62.md).
 Kod i ograniczenia: [dokumentacja techniczna](implementation.md). Projekt bazowy: [CleanYourTV](https://github.com/Gathin23/cleanyourtv) (MIT).
